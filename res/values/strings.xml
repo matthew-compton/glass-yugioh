@@ -2,8 +2,9 @@
 <resources>
 
     <string name="app_name">Yu-Gi-Oh! Duel</string>
-    <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="voice_menu_trigger">It\'s time to duel!</string>
     <string name="initialLife">8000</string>
+    <string name="enemyText">Enemy</string>
+    <string name="userText">Me</string>
 
 </resources>

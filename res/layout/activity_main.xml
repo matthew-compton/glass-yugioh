@@ -1,7 +1,10 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RelativeLayoutMaster"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -9,15 +12,47 @@
     tools:context=".MainActivity" >
 
     <TextView
-        android:id="@+id/userLife"
-        android:layout_width="wrap_content"
+        android:id="@+id/userText"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal"
+        android:text="@string/userText" />
+
+    <TextView
+        android:id="@+id/userLife"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/userText"
+        android:gravity="center_horizontal"
+        android:text="@string/initialLife" />
+
+    <View
+        android:id="@+id/horizontalRule"
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/userLife"
+        android:background="@color/white" />
+
+    <TextView
+        android:id="@+id/enemyLife"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/horizontalRule"
+        android:gravity="center_horizontal"
         android:text="@string/initialLife" />
 
     <TextView
-        android:id="@+id/TextView01"
-        android:layout_width="wrap_content"
+        android:id="@+id/enemyText"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/initialLife" />
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/enemyLife"
+        android:gravity="center_horizontal"
+        android:text="@string/enemyText" />
 
 </RelativeLayout>
