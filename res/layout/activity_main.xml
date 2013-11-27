@@ -9,8 +9,15 @@
     tools:context=".MainActivity" >
 
     <TextView
+        android:id="@+id/userLife"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:text="@string/initialLife" />
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/initialLife" />
 
 </RelativeLayout>
