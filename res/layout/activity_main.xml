@@ -18,7 +18,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:gravity="center_horizontal"
-        android:text="@string/userText" />
+        android:text="@string/userText"
+        android:textSize="@dimen/size_text_player" />
 
     <TextView
         android:id="@+id/userLife"
@@ -27,7 +28,8 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/userText"
         android:gravity="center_horizontal"
-        android:text="@string/initialLife" />
+        android:text="@string/initialLife"
+        android:textSize="@dimen/size_text_life" />
 
     <View
         android:id="@+id/horizontalRule"
@@ -44,7 +46,8 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/horizontalRule"
         android:gravity="center_horizontal"
-        android:text="@string/initialLife" />
+        android:text="@string/initialLife"
+        android:textSize="@dimen/size_text_life" />
 
     <TextView
         android:id="@+id/enemyText"
@@ -53,6 +56,7 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/enemyLife"
         android:gravity="center_horizontal"
-        android:text="@string/enemyText" />
+        android:text="@string/enemyText"
+        android:textSize="@dimen/size_text_player" />
 
 </RelativeLayout>

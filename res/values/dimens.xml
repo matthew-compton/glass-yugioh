@@ -4,4 +4,8 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
 
+    <!-- Text sizes for the main layout -->
+    <dimen name="size_text_life">45sp</dimen>
+    <dimen name="size_text_player">20sp</dimen>
+    
 </resources>
