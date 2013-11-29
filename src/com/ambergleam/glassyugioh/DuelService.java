@@ -14,6 +14,10 @@ import android.util.Log;
  */
 public class DuelService extends Service {
 
+	// The life points
+	public static int userLife, enemyLife;
+	private int startingLife = 8000;
+	
     private static final String TAG = "DuelService";
     private static final String LIVE_CARD_ID = "yugioh";
 
@@ -25,6 +29,8 @@ public class DuelService extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
+        userLife = startingLife;
+        enemyLife = startingLife;
         mTimelineManager = TimelineManager.from(this);
     }
 
@@ -68,4 +74,5 @@ public class DuelService extends Service {
         }
         super.onDestroy();
     }
+
 }

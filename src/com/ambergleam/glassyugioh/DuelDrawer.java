@@ -2,6 +2,8 @@ package com.ambergleam.glassyugioh;
 
 import android.content.Context;
 import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.View;
@@ -13,18 +15,18 @@ public class DuelDrawer implements SurfaceHolder.Callback {
 
 	private static final String TAG = "DuelDrawer";
 
-	private final DuelView mChronometerView;
+	private final DuelView mDuelView;
 	private SurfaceHolder mHolder;
 
 	public DuelDrawer(Context context) {
-		mChronometerView = new DuelView(context);
-		mChronometerView.setListener(new DuelView.ChangeListener() {
+		mDuelView = new DuelView(context);
+		mDuelView.setListener(new DuelView.ChangeListener() {
 			@Override
 			public void onChange() {
-				draw(mChronometerView);
+				draw(mDuelView);
 			}
 		});
-		mChronometerView.setForceStart(true);
+		mDuelView.setForceStart(true);
 	}
 
 	@Override
@@ -33,21 +35,21 @@ public class DuelDrawer implements SurfaceHolder.Callback {
 		int measuredWidth = View.MeasureSpec.makeMeasureSpec(width, View.MeasureSpec.EXACTLY);
 		int measuredHeight = View.MeasureSpec.makeMeasureSpec(height, View.MeasureSpec.EXACTLY);
 		// Alter the layout accordingly
-		mChronometerView.measure(measuredWidth, measuredHeight);
-		mChronometerView.layout(0, 0, mChronometerView.getMeasuredWidth(), mChronometerView.getMeasuredHeight());
+		mDuelView.measure(measuredWidth, measuredHeight);
+		mDuelView.layout(0, 0, mDuelView.getMeasuredWidth(), mDuelView.getMeasuredHeight());
 	}
 
 	@Override
 	public void surfaceCreated(SurfaceHolder holder) {
 		Log.d(TAG, "Surface created");
 		mHolder = holder;
-		mChronometerView.start();
+		mDuelView.start();
 	}
 
 	@Override
 	public void surfaceDestroyed(SurfaceHolder holder) {
 		Log.d(TAG, "Surface destroyed");
-		mChronometerView.stop();
+		mDuelView.stop();
 		mHolder = null;
 	}
 
@@ -62,6 +64,11 @@ public class DuelDrawer implements SurfaceHolder.Callback {
 			return;
 		}
 		if (canvas != null) {
+			// Clear canvas
+			Canvas erase = new Canvas();
+			erase.drawColor(Color.BLACK); 
+			view.draw(erase);
+			// Draw actual view
 			view.draw(canvas);
 			mHolder.unlockCanvasAndPost(canvas);
 		}

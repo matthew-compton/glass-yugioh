@@ -1,24 +1,13 @@
 package com.ambergleam.glassyugioh;
 
-import java.util.concurrent.TimeUnit;
-
 import android.content.Context;
 import android.os.Handler;
-import android.os.SystemClock;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 public class DuelView extends RelativeLayout {
-
-	/**
-	 * Interface to listen for changes on the view layout.
-	 */
-	public interface ChangeListener {
-		/** Notified of a change in the view. */
-		public void onChange();
-	}
 
 	private TextView userLifeTextView, enemyLifeTextView;
 
@@ -27,8 +16,7 @@ public class DuelView extends RelativeLayout {
 	private boolean mVisible;
 	private boolean mRunning;
 
-	// About 24 FPS.
-	private static final long DELAY_MILLIS = 41;
+	private static final long DELAY_MILLIS = 500;
 
 	private ChangeListener mChangeListener;
 
@@ -48,6 +36,14 @@ public class DuelView extends RelativeLayout {
 	}
 
 	/**
+	 * Interface to listen for changes on the view layout.
+	 */
+	public interface ChangeListener {
+		/** Notified of a change in the view. */
+		public void onChange();
+	}
+
+	/**
 	 * Set a {@link ChangeListener}.
 	 */
 	public void setListener(ChangeListener listener) {
@@ -55,7 +51,7 @@ public class DuelView extends RelativeLayout {
 	}
 
 	/**
-	 * Set whether or not to force the start of the chronometer when a window has not been attached
+	 * Set whether or not to force the start of the duel when a window has not been attached
 	 * to the view.
 	 */
 	public void setForceStart(boolean forceStart) {
@@ -64,7 +60,7 @@ public class DuelView extends RelativeLayout {
 	}
 
 	/**
-	 * Start the chronometer.
+	 * Start the duel.
 	 */
 	public void start() {
 		mStarted = true;
@@ -72,7 +68,7 @@ public class DuelView extends RelativeLayout {
 	}
 
 	/**
-	 * Stop the chronometer.
+	 * Stop the duel.
 	 */
 	public void stop() {
 		mStarted = false;
@@ -106,7 +102,7 @@ public class DuelView extends RelativeLayout {
 	};
 
 	/**
-	 * Update the running state of the chronometer.
+	 * Update the running state of the duel.
 	 */
 	private void updateRunning() {
 		boolean running = (mVisible || mForceStart) && mStarted;
@@ -124,8 +120,8 @@ public class DuelView extends RelativeLayout {
 	 * Update the state of the duel.
 	 */
 	private void updateText() {
-		userLifeTextView.setText("7500");
-		enemyLifeTextView.setText("7800");
+		userLifeTextView.setText(String.valueOf(DuelService.userLife));
+		enemyLifeTextView.setText(String.valueOf(DuelService.enemyLife));
 		if (mChangeListener != null) {
 			mChangeListener.onChange();
 		}

@@ -36,6 +36,7 @@ public class MenuActivity extends Activity {
 		switch (item.getItemId()) {
 			case R.id.life:
 				// TODO
+				DuelService.userLife -= 800; 
 				return true;
 			case R.id.stop:
 				stopService(new Intent(this, DuelService.class));
