@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- Miscellaneous Strings -->
     <string name="app_name">Yu-Gi-Oh! Duel</string>
     <string name="voice_trigger_start">it\'s time to duel</string>
     <string name="initialLife">8000</string>
     <string name="enemyText">Enemy</string>
     <string name="userText">Me</string>
-    <string name="stop">Stop</string>
+    
+    <!-- Menu Items -->
+    <string name="menu_life">Life Points</string>
+    <string name="menu_stop">Stop</string>
 
 </resources>
