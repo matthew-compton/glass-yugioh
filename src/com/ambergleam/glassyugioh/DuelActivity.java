@@ -5,14 +5,14 @@ import android.os.Bundle;
 import android.view.WindowManager;
 import android.widget.TextView;
 
-public class MainActivity extends Activity {
+public class DuelActivity extends Activity {
 
 	private int userLife = 8000, enemyLife = 8000;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+		setContentView(R.layout.card_duel);
 		getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 	}
 

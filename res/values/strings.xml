@@ -6,5 +6,6 @@
     <string name="initialLife">8000</string>
     <string name="enemyText">Enemy</string>
     <string name="userText">Me</string>
+    <string name="stop">Stop</string>
 
 </resources>
