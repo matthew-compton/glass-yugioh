@@ -40,7 +40,7 @@ public final class R {
         public static final int horizontalRule=0x7f0a0003;
         public static final int loseLifeEnemy=0x7f0a0007;
         public static final int loseLifeUser=0x7f0a0006;
-        public static final int reset=0x7f0a000a;
+        public static final int restart=0x7f0a000a;
         public static final int stop=0x7f0a000b;
         public static final int userLife=0x7f0a0002;
         public static final int userText=0x7f0a0001;
@@ -58,7 +58,7 @@ public final class R {
         public static final int enemyText=0x7f070003;
         public static final int initialLife=0x7f070002;
         public static final int menu_enemy=0x7f070006;
-        public static final int menu_reset=0x7f070007;
+        public static final int menu_restart=0x7f070007;
         public static final int menu_stop=0x7f070008;
         /**  Menu Items 
          */

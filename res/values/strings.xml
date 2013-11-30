@@ -9,9 +9,9 @@
     <string name="userText">Me</string>
 
     <!-- Menu Items -->
-    <string name="menu_user">Me</string>
-    <string name="menu_enemy">Enemy</string>
-    <string name="menu_reset">Reset</string>
+    <string name="menu_user">My Life</string>
+    <string name="menu_enemy">Enemy Life</string>
+    <string name="menu_restart">Restart</string>
     <string name="menu_stop">Stop</string>
 
 </resources>
