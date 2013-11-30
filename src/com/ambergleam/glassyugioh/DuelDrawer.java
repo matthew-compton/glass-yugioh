@@ -2,8 +2,6 @@ package com.ambergleam.glassyugioh;
 
 import android.content.Context;
 import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.PorterDuff;
 import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.View;
@@ -64,11 +62,6 @@ public class DuelDrawer implements SurfaceHolder.Callback {
 			return;
 		}
 		if (canvas != null) {
-			// Clear canvas
-			Canvas erase = new Canvas();
-			erase.drawColor(Color.BLACK); 
-			view.draw(erase);
-			// Draw actual view
 			view.draw(canvas);
 			mHolder.unlockCanvasAndPost(canvas);
 		}

@@ -7,9 +7,11 @@
     <string name="initialLife">8000</string>
     <string name="enemyText">Enemy</string>
     <string name="userText">Me</string>
-    
+
     <!-- Menu Items -->
-    <string name="menu_life">Life Points</string>
+    <string name="menu_user">Me</string>
+    <string name="menu_enemy">Enemy</string>
+    <string name="menu_reset">Reset</string>
     <string name="menu_stop">Stop</string>
 
 </resources>

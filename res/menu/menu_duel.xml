@@ -1,11 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
 
-     <item
-        android:id="@+id/life"
-        android:icon="@drawable/ic_colon"
-        android:title="@string/menu_life"/>
-    
+    <item
+        android:id="@+id/loseLifeUser"
+        android:icon="@drawable/ic_minus"
+        android:title="@string/menu_user"/>
+    <item
+        android:id="@+id/loseLifeEnemy"
+        android:icon="@drawable/ic_minus"
+        android:title="@string/menu_enemy"/>
+    <item
+        android:id="@+id/addLifeUser"
+        android:icon="@drawable/ic_plus"
+        android:title="@string/menu_user"/>
+    <item
+        android:id="@+id/addLifeEnemy"
+        android:icon="@drawable/ic_plus"
+        android:title="@string/menu_enemy"/>
+    <item
+        android:id="@+id/reset"
+        android:icon="@drawable/ic_sync"
+        android:title="@string/menu_reset"/>
     <item
         android:id="@+id/stop"
         android:icon="@drawable/ic_stop"

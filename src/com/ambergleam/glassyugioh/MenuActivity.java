@@ -34,11 +34,29 @@ public class MenuActivity extends Activity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// Handle item selection.
 		switch (item.getItemId()) {
-			case R.id.life:
-				// TODO
-				DuelService.userLife -= 800; 
+			case R.id.loseLifeUser:
+				// TODO - add voice recognition
+				DuelService.userLife -= 800;
+				return true;
+			case R.id.loseLifeEnemy:
+				// TODO - add voice recognition
+				DuelService.enemyLife -= 800;
+				return true;
+			case R.id.addLifeUser:
+				// TODO - add voice recognition
+				DuelService.userLife += 800;
+				return true;
+			case R.id.addLifeEnemy:
+				// TODO - add voice recognition
+				DuelService.enemyLife += 800;
+				return true;
+			case R.id.reset:
+				// Resets the duel
+				DuelService.userLife = DuelService.startingLife;
+				DuelService.enemyLife = DuelService.startingLife;
 				return true;
 			case R.id.stop:
+				// Ends the duel and the service
 				stopService(new Intent(this, DuelService.class));
 				return true;
 			default:
